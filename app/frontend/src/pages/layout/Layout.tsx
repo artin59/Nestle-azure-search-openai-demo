@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, RefObject } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./Layout.module.css";
+import sparklePng from "../../assets/sparkle.png";
 
 import { useLogin } from "../../authConfig";
 
@@ -39,7 +40,10 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer} ref={menuRef}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>{t("headerTitle")}</h3>
+                        <h3 className={styles.headerTitle}>
+                            {t("headerTitle")}
+                            <img src={sparklePng} alt="Sparkle icon" style={{ width: "24px", height: "24px", marginLeft: "8px" }} />
+                        </h3>
                     </Link>
                     <nav>
                         <ul className={`${styles.headerNavList} ${menuOpen ? styles.show : ""}`}>
