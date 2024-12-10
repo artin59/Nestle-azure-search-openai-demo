@@ -21,7 +21,7 @@ urlFragment: azure-search-openai-demo
 
 1. I have included below the given steps to run the chatbot localy.
 2. This AI chatbot, uses react for its frontend, and python as its backend, and it is hosted on mictorosft Azure. It also "uses Azure OpenAI Service to access GPT models, and Azure AI Search for data indexing and retrieval", and Azure openAI document Intelligence for getting data from the pdf files.
-3. Since I was extremely busy with exam, I wasn't able to implement all the features which i hoped to implement therefore there are some limitations to the project, however, in the future I will be developing a webscraper for the data, and also cleaning up the frontend. Furthermore I will add speech input/output for accessibility.
+3. Since I was extremely busy with exams, I wasn't able to implement all the features which i hoped to implement therefore there are some limitations to the project, however, in the future I will be developing a webscraper for the data, and also cleaning up the frontend. Furthermore I will add speech input/output for accessibility.
 
 
 ### Local environment
