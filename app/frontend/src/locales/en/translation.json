@@ -39,7 +39,7 @@
     "defaultExamples": {
         "1": "Is Nestle using sustainable practices?",
         "2": "Are Nestle products peanut free?",
-        "3": "What are some good snack recipes?",
+        "3": "what are some good recipes for the summer?",
         "placeholder": "Type a new question"
     },
     "askTitle": "Ask your data",
