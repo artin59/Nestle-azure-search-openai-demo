@@ -118,3 +118,68 @@ You can only run a development server locally **after** having successfully run 
 
 It's also possible to enable hotloading or the VS Code debugger.
 See more tips in [the local development guide](docs/localdev.md).
+
+## Using the app
+
+- In Azure: navigate to the Azure WebApp deployed by azd. The URL is printed out when azd completes (as "Endpoint"), or you can find it in the Azure portal.
+- Running locally: navigate to 127.0.0.1:50505
+
+Once in the web app:
+
+- Try different topics in chat or Q&A context. For chat, try follow up questions, clarifications, ask to simplify or elaborate on answer, etc.
+- Explore citations and sources
+- Click on "settings" to try different options, tweak prompts, etc.
+
+## Clean up
+
+To clean up all the resources created by this sample:
+
+1. Run `azd down`
+2. When asked if you are sure you want to continue, enter `y`
+3. When asked if you want to permanently delete the resources, enter `y`
+
+The resource group and all the resources will be deleted.
+
+## Guidance
+
+You can find extensive documentation in the [docs](docs/README.md) folder:
+
+- Deploying:
+  - [Troubleshooting deployment](docs/deploy_troubleshooting.md)
+    - [Debugging the app on App Service](docs/appservice.md)
+  - [Deploying with azd: deep dive and CI/CD](docs/azd.md)
+  - [Deploying with existing Azure resources](docs/deploy_existing.md)
+  - [Deploying from a free account](docs/deploy_lowcost.md)
+  - [Enabling optional features](docs/deploy_features.md)
+    - [Login and access control](docs/login_and_acl.md)
+    - [GPT-4 Turbo with Vision](docs/gpt4v.md)
+    - [Private endpoints](docs/deploy_private.md)
+  - [Sharing deployment environments](docs/sharing_environments.md)
+- [Local development](docs/localdev.md)
+- [Customizing the app](docs/customization.md)
+- [Data ingestion](docs/data_ingestion.md)
+- [Monitoring with Application Insights](docs/monitoring.md)
+- [Productionizing](docs/productionizing.md)
+- [Alternative RAG chat samples](docs/other_samples.md)
+
+### Resources
+
+- [📖 Blog: Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and AI Search](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/revolutionize-your-enterprise-data-with-chatgpt-next-gen-apps-w-azure-openai-and/3762087)
+- [📖 Docs: Azure AI Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
+- [📖 Docs: Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview)
+- [📖 Docs: Comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai/)
+- [📖 Blog: Access Control in Generative AI applications with Azure AI Search](https://techcommunity.microsoft.com/blog/azure-ai-services-blog/access-control-in-generative-ai-applications-with-azure-ai-search/3956408)
+- [📺 Talk: Quickly build and deploy OpenAI apps on Azure, infused with your own data](https://www.youtube.com/watch?v=j8i-OM5kwiY)
+- [📺 Talks: AI Chat App Hack series](https://www.youtube.com/playlist?list=PL5lwDBUC0ag6_dGZst5m3G72ewfwXLcXV)
+
+### Getting help
+
+This is a sample built to demonstrate the capabilities of modern Generative AI apps and how they can be built in Azure.
+For help with deploying this sample, please post in [GitHub Issues](/issues). If you're a Microsoft employee, you can also post in [our Teams channel](https://aka.ms/azai-python-help).
+
+This repository is supported by the maintainers, _not_ by Microsoft Support,
+so please use the support mechanisms described above, and we will do our best to help you out.
+
+### Note
+
+>Note: The PDF documents used in this demo contain information generated using a language model (Azure OpenAI Service). The information contained in these documents is only for demonstration purposes and does not reflect the opinions or beliefs of Microsoft. Microsoft makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the information contained in this document. All rights reserved to Microsoft.
