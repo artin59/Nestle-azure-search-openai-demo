@@ -36,6 +36,7 @@ import { TokenClaimsDisplay } from "../../components/TokenClaimsDisplay";
 import { LoginContext } from "../../loginContext";
 import { LanguagePicker } from "../../i18n/LanguagePicker";
 import { Settings } from "../../components/Settings/Settings";
+import ChatPopupLayout from './ChatPopupLayout';
 
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
@@ -349,7 +350,9 @@ const Chat = () => {
     const { t, i18n } = useTranslation();
 
     return (
+        <ChatPopupLayout>
         <div className={styles.container}>
+            {<div className={styles.container}>
             {/* Setting the page title using react-helmet-async */}
             <Helmet>
                 <title>{t("pageTitle")}</title>
@@ -521,8 +524,11 @@ const Chat = () => {
                     {useLogin && <TokenClaimsDisplay />}
                 </Panel>
             </div>
+        </div>}
         </div>
+    </ChatPopupLayout>
     );
+    
 };
 
 export default Chat;
