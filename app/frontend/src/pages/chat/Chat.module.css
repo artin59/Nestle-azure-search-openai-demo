@@ -143,10 +143,4 @@
         max-width: 80%;
         min-width: 31.25rem;
     }
-    .chatPopupContainer {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background: white;
-    }
 }
