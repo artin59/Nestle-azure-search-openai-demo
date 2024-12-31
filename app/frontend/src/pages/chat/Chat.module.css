@@ -19,64 +19,6 @@
     max-height: calc(100vh - 10rem);
 }
 
-
-.chatEmptyState {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 64rem;
-    padding-top: 1rem;
-}
-
-.chatEmptyStateTitle {
-    font-size: 2.75rem;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 1.875rem;
-}
-
-.chatEmptyStateSubtitle {
-    font-weight: 600;
-    margin-bottom: 0.625rem;
-}
-
-
-.chatEmptyState {
-    flex: 1;
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    align-self: flex-end;
-}
-
-.commandButton {
-    margin-bottom: 1.25rem;
-}
-
-@media (min-width: 992px) {
-    .container {
-        margin-top: 1.25rem;
-    }
-
-    .chatEmptyState {
-        padding-top: 3.75rem;
-    }
-
-.chatEmptyStateTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.chatEmptyStateSubtitle {
-    font-size: 1rem;
-    text-align: center;
-}
-
-
 .chatEmptyState {
     flex: 1;
     display: flex;
