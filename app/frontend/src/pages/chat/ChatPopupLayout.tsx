@@ -4,47 +4,52 @@ import backgroundImg from "../../assets/backgroundimg.png";
 import sparkleImg from '../../assets/sparkle.png';
 
 interface ChatPopupLayoutProps {
-    children: ReactNode; 
+    children: ReactNode;
 }
 
 const ChatPopupLayout: React.FC<ChatPopupLayoutProps> = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
-  
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+        console.log('Chat panel open:', !isOpen);
+    };
+
     return (
-      <div className="relative min-h-screen w-full">
-        {/* Background Image */}
-        <div 
-          className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${backgroundImg})` 
-          }}
-        />
-  
-        {/* Chat Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out
-            ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
-        >
-          <img 
-            src={sparkleImg} 
-            alt="Chat Button" 
-            className="w-8 h-8"
-          />
-        </button>
-  
-        {/* Chat Panel */}
-        <div
-          className={`fixed right-0 top-0 h-full bg-white shadow-2xl transition-all duration-300 ease-in-out transform
-            ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-            w-full sm:w-[400px] md:w-[450px] lg:w-[500px]`}
-        >
-          <div className="h-full overflow-hidden">
-            {children}
-          </div>
+        <div className="relative min-h-screen w-full">
+            {/* Background Image */}
+            <div
+                className="fixed inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+                style={{
+                    backgroundImage: `url(${backgroundImg})`
+                }}
+            />
+
+            {/* Chat Button */}
+            <button
+                onClick={handleClick}
+                className={`fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out
+                ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
+            >
+                <img
+                    src={sparkleImg}
+                    alt="Chat Button"
+                    className="w-6 h-6"
+                />
+            </button>
+
+            {/* Chat Panel */}
+            <div
+                className={`fixed bottom-6 right-6 w-[350px] sm:w-[400px] md:w-[450px] lg:w-[500px] 
+                ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'} 
+                transform transition-all duration-300 ease-in-out bg-white shadow-2xl rounded-lg z-50`}
+            >
+                <div className="h-full overflow-hidden">
+                    {children}
+                </div>
+            </div>
         </div>
-      </div>
     );
-  };
-  
-  export default ChatPopupLayout;
+};
+
+export default ChatPopupLayout;

@@ -9,6 +9,9 @@ import { useLogin } from "../../authConfig";
 import { LoginButton } from "../../components/LoginButton";
 import { IconButton } from "@fluentui/react";
 
+// Import the ChatPopupLayout component
+import ChatPopupLayout from "../chat/ChatPopupLayout";  // Update path as needed
+
 const Layout = () => {
     const { t } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -79,7 +82,10 @@ const Layout = () => {
                 </div>
             </header>
 
-            <Outlet />
+            {/* Add ChatPopupLayout here to wrap the children content */}
+            <ChatPopupLayout>
+                <Outlet />  {/* This is where your page content will be rendered */}
+            </ChatPopupLayout>
         </div>
     );
 };
