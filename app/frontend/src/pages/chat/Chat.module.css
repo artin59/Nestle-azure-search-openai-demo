@@ -19,6 +19,7 @@
     max-height: calc(100vh - 10rem);
 }
 
+
 .chatEmptyState {
     flex-grow: 1;
     display: flex;
